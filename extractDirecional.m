@@ -6,9 +6,12 @@ function [orientim, mask, freq, newim, binim] = extractDirecional(fingerprint, b
     % Determinar a orientacao
     orientim = orientfranja(normim);  
     
-    % Ridge Frequency    
+    % Ridge Frequency 
+    blksze = 32;
     [freq, medfreq] = freqRidge(normim, mask, orientim, blksze);
     freq = medfreq.*mask;
+    
+    keyboard
 
     % Apply filter
     newim = filterRidge(normim, orientim, freq, medfreq, mask);

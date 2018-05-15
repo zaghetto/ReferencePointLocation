@@ -9,22 +9,30 @@ freq = zeros(size(im));
 
 % Faz um processamento bloco a bloco, determinando para cada subbloco a
 % frequencia de franjas
-for r = 1:blksze:rows-blksze
-    for c = 1:blksze:cols-blksze
-        
-        % Seleciona o sub-bloco a ser trabalhado
-        blkim = im(r:r+blksze-1, c:c+blksze-1);
-        
-        % Seleciona o sub-bloco de orientaçao equivalente
-        blkor = orient(r:r+blksze-1, c:c+blksze-1);
-        
-        % Estima a frequencia de franjas no sub-bloco por meio da funçao
-        % freqest e armazena a estimativa no sub-bloco correspondente de
-        % freq
-        freq(r:r+blksze-1,c:c+blksze-1) = freqest(blkim, blkor);
-        
-    end
-end
+debug = 0;
+
+% Uses block processing
+fun = @(block_proc) freqest(block_proc, orient, debug);
+
+freq = blockproc(im,[blksze blksze], fun);
+
+
+% for r = 1:blksze:rows-blksze
+%     for c = 1:blksze:cols-blksze
+%         
+%         % Seleciona o sub-bloco a ser trabalhado
+%         blkim = im(r:r+blksze-1, c:c+blksze-1);
+%         
+%         % Seleciona o sub-bloco de orientaçao equivalente
+%         blkor = orient(r:r+blksze-1, c:c+blksze-1);
+%         
+%         % Estima a frequencia de franjas no sub-bloco por meio da funçao
+%         % freqest e armazena a estimativa no sub-bloco correspondente de
+%         % freq
+%         freqe(r:r+blksze-1,c:c+blksze-1) = freqest(blkim, blkor, debug);
+%         
+%     end
+% end
 
 % Marca as regioes de freq onde nao ha franjas
 freq = freq.*mask;

@@ -192,8 +192,7 @@ for i=3:Nimg
     
     cont = cont+1;
     
-    keyboard
-    
+        
 end
 
 
