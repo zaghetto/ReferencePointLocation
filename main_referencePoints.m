@@ -27,11 +27,6 @@ orientMAT = [];
 % Counter
 cont = 1;
 
-% Allocation
-imagem = zeros([240 336], 'uint8');
-map = zeros([256 3], 'uint8');
-M = 3.7;
-
 % Select image folder
 PATHNAME = uigetdir([], 'Select image folder');
 imgs = dir(PATHNAME);
