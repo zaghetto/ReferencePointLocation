@@ -1,7 +1,7 @@
 # ReferencePointLocation
-Fingerprint reference point estimation.
+Fingerprint reference points estimation.
 
-%Third-party software component
+# Third-party software component
 
 Peter Kovesi<br>
 School of Computer Science & Software Engineering<br>
