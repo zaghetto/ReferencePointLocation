@@ -1,6 +1,4 @@
-% NORMALIZA - Normaliza os valores da imagem para media 0 e desvio padrao 1
-
-function n = normaliza(im)
+function n = normalize(im)
 
     % Verifica se a imagem foi convertida de uint8 para double.
     % Em caso negativo realiza a conversao.

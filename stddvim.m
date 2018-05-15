@@ -1,5 +1,7 @@
 function imagemstdv = stddvim(imagem, blksze);
+
 coder.extrinsic('std2');
+
 % Determina dimensoes da imagem
 [L, C] = size(imagem);
 

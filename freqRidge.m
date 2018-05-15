@@ -1,12 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Alexandre Zaghetto                               %
-% zaghetto@unb.br                                  %
-% University of Brasília                           %
-% Department of Computer Science                   %
-% Laboratory of Images, Signals and Acoustics      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Reference Point Estimation.                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [freq, medianfreq] = fredRidge(im, mask, orient, blksze)
 

@@ -169,10 +169,7 @@ for i=3:Nimg
         imshow(Mbin);
         title('Mbin = Binarize(Mfilter)');
     end
-    
-    % Integra as direções
-    A = integratePixels(E);
-    
+       
     % Determina as coordenadas da referência
     [CandRefi,CandRefj] = find(Mbin == 1);
     

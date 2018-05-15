@@ -1,13 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Alexandre Zaghetto                               %
-% zaghetto@unb.br                                  %
-% University of Brasília                           %
-% Department of Computer Science                   %
-% Laboratory of Images, Signals and Acoustics      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Reference Point Estimation.                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 function [orientim, mask, freq, newim, binim] = extractDirecional(fingerprint, blksze);
 
     % Normaliza a imagem

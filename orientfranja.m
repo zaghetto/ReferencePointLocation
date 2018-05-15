@@ -1,4 +1,4 @@
-function [orientim] = orientfranja(im)
+function orientim = orientfranja(im)
     
     % Carrega os filtros gaussianos Input.f1 (e gradientes Input.f1x e Input.f1y), Input.f2 e Input.f3;
     Input = coder.load ('orientfiltros.mat', 'f1', 'f1x', 'f1y', 'f2', 'f3');

@@ -1,20 +1,10 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Alexandre Zaghetto                               %
-% zaghetto@unb.br                                  %
-% University of Brasília                           %
-% Department of Computer Science                   %
-% Laboratory of Images, Signals and Acoustics      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Reference Point Estimation.                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [normim, mask, maskind] = segmentafranja(im, blksze)
+function [normim, mask, maskind] = segmentRidge(im, blksze)
     
     % Determina o limiar de corte para geraçao da mascara
     thresh = 0.1;        
       
     % Normaliza a imagem para que tenha media 0 e desvio padrao 1
-    im = normaliza(im);
+    im = normalize(im);
 
     % Gera uma imagem onde cada elemento de um sub-bloco de dimensoes blksze eh substituido
     % pelo desvio padrao do sub-bloco
